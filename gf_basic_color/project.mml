@@ -1,0 +1,115 @@
+scale: 1
+metatile: 2
+name: Geofabrik Basic Colour
+description: An OpenStreetMap Mapnik style to be used as a base map, in CartoCSS
+bounds: &world
+  - -180
+  - -85.05112877980659
+  - 180
+  - 85.05112877980659
+center:
+  - 7.75
+  - 48.6
+  - 12
+format: png
+interactivity: false
+minzoom: 0
+maxzoom: 22
+srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
+Stylesheet:
+  - style.mss
+  - water.mss
+  - admin.mss
+  - land.mss
+  - buildings.mss
+  - roads.mss
+  - stations.mss
+  - aerialways.mss
+
+Layer:
+  - id: ocean
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 0
+  - id: water_polygons
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 4
+  - id: water_lines
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 4
+  - id: land
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 7
+  - id: sites
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 14
+  - id: buildings
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 14
+  - id: boundaries
+    properties:
+      buffer-size: 8
+      maxzoom: 10
+      minzoom: 0
+  - id: streets
+    properties:
+      buffer-size: 64
+      maxzoom: 22
+      minzoom: 5
+#  - id: street_labels
+#    properties:
+#      buffer-size: 0
+#      maxzoom: 22
+#      minzoom: 12
+#  - id: street_labels_points
+#    properties:
+#      buffer-size: 0
+#      maxzoom: 22
+#      minzoom: 12
+  - id: water_lines_labels
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 4
+  - id: water_polygons_labels
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 4
+  - id: place_labels
+    properties:
+      buffer-size: 128
+      maxzoom: 22
+      minzoom: 3
+  - id: boundary_labels
+    properties:
+      buffer-size: 0
+      maxzoom: 10
+      minzoom: 2
+  - id: aerialways
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 12
+  - id: public_transport
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 11
+  - id: addresses
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 14
