@@ -1202,6 +1202,9 @@
       [zoom >= 8] { line-width: 0.8; }
       [zoom >= 12] { line-width: 0.9; }
       line-join: round;
+      [tunnel = 1] {
+        line-dasharray: 8,8;
+      }
     }
   }
 }
