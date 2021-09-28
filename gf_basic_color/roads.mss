@@ -327,7 +327,7 @@
   }
   [zoom = 10][kind = 'tertiary'],
   [zoom = 11][kind = 'tertiary'],
-  [zoom = 12][kind = 'unkindified'] {
+  [zoom = 12][kind = 'unclassified'] {
     line-color: @halo-color-for-minor-road;
     line-width: 2.2;
     line-opacity: 0.3;
@@ -477,7 +477,7 @@
   }
 
   [kind = 'residential'],
-  [kind = 'unkindified'] {
+  [kind = 'unclassified'] {
     [zoom >= 13] {
       line-color: @residential-casing;
       line-width: @residential-width-z13;
@@ -922,12 +922,12 @@
   }
 
   [kind = 'residential'],
-  [kind = 'unkindified'] {
+  [kind = 'unclassified'] {
     [zoom = 12][kind = 'residential'] {
       line-color: @unimportant-road;
       line-width: 0.4;
     }
-    [zoom = 12][kind = 'unkindified'] {
+    [zoom = 12][kind = 'unclassified'] {
       line-color: @unimportant-road;
       line-width: 1;
     }
@@ -1284,7 +1284,7 @@
   }
 
   [kind = 'residential'],
-  [kind = 'unkindified'],
+  [kind = 'unclassified'],
   [kind = 'road'] {
     [zoom >= 15] {
       text-name: "[name]";
@@ -1472,7 +1472,7 @@
     }
   }
 
-  [kind = 'unkindified'],
+  [kind = 'unclassified'],
   [kind = 'residential'] {
     [zoom >= 15] {
       text-name: "[ref]";
