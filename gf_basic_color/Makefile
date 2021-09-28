@@ -4,13 +4,14 @@ TILEDIR=vectortiles
 
 XMLFILES=$(shell for ZOOM in `seq 0 14`; do echo -n "project_z$${ZOOM}.xml "; done)
 MMLFILES=$(shell for ZOOM in `seq 0 14`; do echo -n "project_z$${ZOOM}.mml "; done)
+MSSFILES=admin.mss aerialways.mss buildings.mss land.mss roads.mss stations.mss style.mss water-features.mss water.mss
 
 all: $(XMLFILES)
 
 clean: $(XMLFILES) $(MMLFILES)
 	rm -f $^
 
-project_%.xml: project_%.mml
+project_%.xml: project_%.mml $(MSSFILES)
 	$(CARTO) $^ > $@
 
 project_z0.mml: project.mml
