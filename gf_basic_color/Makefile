@@ -13,7 +13,7 @@ clean: $(XMLFILES) $(MMLFILES)
 project_%.xml: project_%.mml
 	$(CARTO) $^ > $@
 
-project_z0.mml: project.mml metadata.json
+project_z0.mml: project.mml
 	$(THISDIR)/../style_for_rendering_with_ogr_mvt.py -z 0 $< $(TILEDIR) > $@
 
 project_z1.mml: project.mml 
