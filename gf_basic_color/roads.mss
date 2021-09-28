@@ -1086,10 +1086,10 @@
     /*[zoom >= 13][access != 'no'],*/
     [zoom >= 15] {
       ::fill[zoom >= 15] {
-        background/line-color: red; //@bridleway-casing;
+        background/line-color: @bridleway-casing;
         background/line-cap: round;
         background/line-join: round;
-        background/line-width: 5; // @bridleway-width-z15 + 2 * @paths-background-width;
+        background/line-width: @bridleway-width-z15 + 2 * @paths-background-width;
         background/line-opacity: 0.4;
       }
       line/line-color: @bridleway-fill;
