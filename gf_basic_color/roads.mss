@@ -378,7 +378,7 @@
       [zoom >= 17] { line-width: @trunk-width-z17; }
       [zoom >= 18] { line-width: @trunk-width-z18; }
       [zoom >= 19] { line-width: @trunk-width-z19; }
-      #roads-casing {
+      ::casing {
         line-join: round;
         line-cap: round;
       }
@@ -404,7 +404,7 @@
       [zoom >= 17] { line-width: @primary-width-z17; }
       [zoom >= 18] { line-width: @primary-width-z18; }
       [zoom >= 19] { line-width: @primary-width-z19; }
-      #roads-casing {
+      ::casing {
         line-join: round;
         line-cap: round;
       }
@@ -432,7 +432,7 @@
       [zoom >= 17] { line-width: @secondary-width-z17; }
       [zoom >= 18] { line-width: @secondary-width-z18; }
       [zoom >= 19] { line-width: @secondary-width-z19; }
-      #roads-casing {
+      ::casing {
         line-join: round;
         line-cap: round;
       }
@@ -459,7 +459,7 @@
       [zoom >= 17] { line-width: @tertiary-width-z17; }
       [zoom >= 18] { line-width: @tertiary-width-z18; }
       [zoom >= 19] { line-width: @tertiary-width-z19; }
-      #roads-casing {
+      ::casing {
         line-join: round;
         line-cap: round;
       }
@@ -486,7 +486,7 @@
       [zoom >= 17] { line-width: @residential-width-z17; }
       [zoom >= 18] { line-width: @residential-width-z18; }
       [zoom >= 19] { line-width: @residential-width-z19; }
-      #roads-casing {
+      ::casing {
         line-join: round;
         line-cap: round;
       }
@@ -531,7 +531,7 @@
       [zoom >= 17] { line-width: @pedestrian-width-z17; }
       [zoom >= 18] { line-width: @pedestrian-width-z18; }
       [zoom >= 19] { line-width: @pedestrian-width-z19; }
-      #roads-casing {
+      ::casing {
         line-join: round;
         line-cap: round;
       }
@@ -557,7 +557,7 @@
       [zoom >= 17] { line-width: @living-street-width-z17; }
       [zoom >= 18] { line-width: @living-street-width-z18; }
       [zoom >= 19] { line-width: @living-street-width-z19; }
-      #roads-casing {
+      ::casing {
         line-cap: round;
         line-join: round;
       }
@@ -1063,7 +1063,7 @@
   [kind = 'steps'] {
     /*[zoom >= 13][access != 'no'],*/
     [zoom >= 15] {
-      #roads-fill[zoom >= 15] {
+      ::fill[zoom >= 15] {
         background/line-color: @steps-casing;
         background/line-cap: round;
         background/line-join: round;
@@ -1084,7 +1084,7 @@
   [kind = 'path']{
     /*[zoom >= 13][access != 'no'],*/
     [zoom >= 15] {
-      #roads-fill[zoom >= 15] {
+      ::fill[zoom >= 15] {
         background/line-color: red; //@bridleway-casing;
         background/line-cap: round;
         background/line-join: round;
@@ -1107,7 +1107,7 @@
     /*[zoom >= 13][access != 'no'],*/
     [zoom >= 15] {
       /* The white casing that you mainly see against forests and other dark kinds */
-      #roads-fill[zoom >= 15] {
+      ::fill[zoom >= 15] {
         background/line-opacity: 0.4;
         background/line-color: @track-casing;
         background/line-join: round;
