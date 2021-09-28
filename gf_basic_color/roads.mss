@@ -379,10 +379,8 @@
       [zoom >= 17] { line-width: @trunk-width-z17; }
       [zoom >= 18] { line-width: @trunk-width-z18; }
       [zoom >= 19] { line-width: @trunk-width-z19; }
-      ::casing {
-        line-join: round;
-        line-cap: round;
-      }
+      line-join: round;
+      line-cap: round;
       [tunnel = 1] {
         line-dasharray: 4,2;
       }
@@ -405,10 +403,8 @@
       [zoom >= 17] { line-width: @primary-width-z17; }
       [zoom >= 18] { line-width: @primary-width-z18; }
       [zoom >= 19] { line-width: @primary-width-z19; }
-      ::casing {
-        line-join: round;
-        line-cap: round;
-      }
+      line-join: round;
+      line-cap: round;
       [tunnel = 1] {
         line-dasharray: 4,2;
       }
@@ -433,10 +429,8 @@
       [zoom >= 17] { line-width: @secondary-width-z17; }
       [zoom >= 18] { line-width: @secondary-width-z18; }
       [zoom >= 19] { line-width: @secondary-width-z19; }
-      ::casing {
-        line-join: round;
-        line-cap: round;
-      }
+      line-join: round;
+      line-cap: round;
       [tunnel = 1] {
         line-dasharray: 4,2;
       }
@@ -460,10 +454,8 @@
       [zoom >= 17] { line-width: @tertiary-width-z17; }
       [zoom >= 18] { line-width: @tertiary-width-z18; }
       [zoom >= 19] { line-width: @tertiary-width-z19; }
-      ::casing {
-        line-join: round;
-        line-cap: round;
-      }
+      line-join: round;
+      line-cap: round;
       [tunnel = 1] {
         line-dasharray: 4,2;
       }
@@ -487,10 +479,8 @@
       [zoom >= 17] { line-width: @residential-width-z17; }
       [zoom >= 18] { line-width: @residential-width-z18; }
       [zoom >= 19] { line-width: @residential-width-z19; }
-      ::casing {
-        line-join: round;
-        line-cap: round;
-      }
+      line-join: round;
+      line-cap: round;
       [tunnel = 1] {
         line-dasharray: 4,2;
       }
@@ -513,10 +503,10 @@
     [zoom >= 17] { line-width: @service-width-z17; }
     [zoom >= 18] { line-width: @service-width-z18; }
     [zoom >= 19] { line-width: @service-width-z19; }
-      [tunnel = 1] {
+    [tunnel = 1] {
       line-dasharray: 4,2;
     }
-      [bridge = 1] {
+    [bridge = 1] {
       line-color: @bridge-casing;
       line-join: round;
       }
@@ -532,10 +522,8 @@
       [zoom >= 17] { line-width: @pedestrian-width-z17; }
       [zoom >= 18] { line-width: @pedestrian-width-z18; }
       [zoom >= 19] { line-width: @pedestrian-width-z19; }
-      ::casing {
-        line-join: round;
-        line-cap: round;
-      }
+      line-join: round;
+      line-cap: round;
       [tunnel = 1] {
         line-dasharray: 4,2;
       }
@@ -558,10 +546,8 @@
       [zoom >= 17] { line-width: @living-street-width-z17; }
       [zoom >= 18] { line-width: @living-street-width-z18; }
       [zoom >= 19] { line-width: @living-street-width-z19; }
-      ::casing {
-        line-cap: round;
-        line-join: round;
-      }
+      line-cap: round;
+      line-join: round;
       [tunnel = 1] {
         line-dasharray: 4,2;
       }
@@ -1064,19 +1050,17 @@
   [kind = 'steps'] {
     /*[zoom >= 13][access != 'no'],*/
     [zoom >= 15] {
-      ::fill[zoom >= 15] {
-        background/line-color: @steps-casing;
-        background/line-cap: round;
-        background/line-join: round;
-        background/line-width: @steps-width-z15 + 2 * @paths-background-width;
-        background/line-opacity: 0.4;
-      }
-      line/line-color: @steps-fill;
-      /*[access = 'no'] { line/line-color: @steps-fill-noaccess; }*/
-      line/line-dasharray: 2,1;
-      line/line-width: @steps-width-z13;
-      [zoom >= 15] { line/line-width:  @steps-width-z15; }
+      background/line-color: @steps-casing;
+      background/line-cap: round;
+      background/line-join: round;
+      background/line-width: @steps-width-z15 + 2 * @paths-background-width;
+      background/line-opacity: 0.4;
     }
+    line/line-color: @steps-fill;
+    /*[access = 'no'] { line/line-color: @steps-fill-noaccess; }*/
+    line/line-dasharray: 2,1;
+    line/line-width: @steps-width-z13;
+    [zoom >= 15] { line/line-width:  @steps-width-z15; }
   }
 
   [kind = 'bridleway'],
@@ -1085,21 +1069,19 @@
   [kind = 'path']{
     /*[zoom >= 13][access != 'no'],*/
     [zoom >= 15] {
-      ::fill[zoom >= 15] {
-        background/line-color: @bridleway-casing;
-        background/line-cap: round;
-        background/line-join: round;
-        background/line-width: @bridleway-width-z15 + 2 * @paths-background-width;
-        background/line-opacity: 0.4;
-      }
-      line/line-color: @bridleway-fill;
-      line/line-dasharray: 4,2;
-      line/line-width: @bridleway-width-z13 * 0.7;
-      [zoom >= 15] { line/line-width: @bridleway-width-z15 * 0.7; }
-      [tunnel = 1] {
-        line/line-join: round;
-        line/line-cap: round;
-      }
+      background/line-color: @bridleway-casing;
+      background/line-cap: round;
+      background/line-join: round;
+      background/line-width: @bridleway-width-z15 + 2 * @paths-background-width;
+      background/line-opacity: 0.4;
+    }
+    line/line-color: @bridleway-fill;
+    line/line-dasharray: 4,2;
+    line/line-width: @bridleway-width-z13 * 0.7;
+    [zoom >= 15] { line/line-width: @bridleway-width-z15 * 0.7; }
+    [tunnel = 1] {
+      line/line-join: round;
+      line/line-cap: round;
     }
   }
 
@@ -1108,19 +1090,17 @@
     /*[zoom >= 13][access != 'no'],*/
     [zoom >= 15] {
       /* The white casing that you mainly see against forests and other dark kinds */
-      ::fill[zoom >= 15] {
-        background/line-opacity: 0.4;
-        background/line-color: @track-casing;
-        background/line-join: round;
-        background/line-cap: round;
-        background/line-width: @track-width-z15 + 2 * @paths-background-width;
-        /* With the heavier dasharrays on grade1 and grade2 it helps to make the casing a bit larger */
-        [tracktype = 'grade1'] {
-          background/line-width: @track-grade1-width-z15 + 2 * @paths-background-width;
-        }
-        [tracktype = 'grade2'] {
-          background/line-width: @track-grade2-width-z15 + 2 * @paths-background-width;
-        }
+      background/line-opacity: 0.4;
+      background/line-color: @track-casing;
+      background/line-join: round;
+      background/line-cap: round;
+      background/line-width: @track-width-z15 + 2 * @paths-background-width;
+      /* With the heavier dasharrays on grade1 and grade2 it helps to make the casing a bit larger */
+      [tracktype = 'grade1'] {
+        background/line-width: @track-grade1-width-z15 + 2 * @paths-background-width;
+      }
+      [tracktype = 'grade2'] {
+        background/line-width: @track-grade2-width-z15 + 2 * @paths-background-width;
       }
 
       /* Set the properties of the brown inside */
