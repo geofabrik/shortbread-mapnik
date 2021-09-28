@@ -25,9 +25,6 @@ args = parser.parse_args()
 input_yaml = yaml.safe_load(args.input_file)
 layers = input_yaml.get("Layer", [])
 
-# Vector layers
-vector_layers = []
-
 tile_dir = os.path.join(args.path_to_zoom, str(args.zoom))
 
 result_layers = []
@@ -39,6 +36,7 @@ for i in range(len(layers)):
         continue
     result_layer = {
         "id": layer_from["id"],
+        "geometry": layer_from["geometry"],
         "properties": layer_from["properties"],
         "Datasource": {
             "file": "{}".format(tile_dir),
@@ -49,11 +47,6 @@ for i in range(len(layers)):
         "extent": "-20037508,-20037508,20037508,20037508",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
     }
-    if "geometry" in layer_from:
-        geometry = layer_from["geometry"]
-        if geometry == "line":
-            geometry = "linestring"
-        result_layer["geometry"] = geometry
     result_layers.append(result_layer)
 
 input_yaml["Layer"] = result_layers

@@ -29,86 +29,103 @@ Stylesheet:
 
 Layer:
   - id: ocean
+    geometry: polygon
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 0
   - id: water_polygons
+    geometry: polygon
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 4
   - id: water_lines
+    geometry: linestring
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 4
   - id: land
+    geometry: polygon
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 7
   - id: sites
+    geometry: polygon
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 14
   - id: buildings
+    geometry: polygon
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 14
   - id: boundaries
+    geometry: linestring
     properties:
       buffer-size: 8
       maxzoom: 10
       minzoom: 0
   - id: streets
+    geometry: linestring
     properties:
       buffer-size: 64
       maxzoom: 22
       minzoom: 5
 #  - id: street_labels
+#    geometry: linestring
 #    properties:
 #      buffer-size: 0
 #      maxzoom: 22
 #      minzoom: 12
 #  - id: street_labels_points
+#    geometry: point
 #    properties:
 #      buffer-size: 0
 #      maxzoom: 22
 #      minzoom: 12
   - id: water_lines_labels
+    geometry: linestring
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 4
   - id: water_polygons_labels
+    geometry: point
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 4
   - id: place_labels
+    geometry: point
     properties:
       buffer-size: 128
       maxzoom: 22
       minzoom: 3
   - id: boundary_labels
+    geometry: point
     properties:
       buffer-size: 0
       maxzoom: 10
       minzoom: 2
   - id: aerialways
+    geometry: linestring
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 12
   - id: public_transport
+    geometry: point
     properties:
       buffer-size: 0
       maxzoom: 22
       minzoom: 11
   - id: addresses
+    geometry: point
     properties:
       buffer-size: 0
       maxzoom: 22
