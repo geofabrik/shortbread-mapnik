@@ -72,7 +72,7 @@
     text-placement: line;
     text-fill: @water-text;
     text-spacing: 400;
-    text-size: 20;
+    text-size: 8;
     text-halo-radius: @standard-halo-radius;
     text-halo-fill: @standard-halo-fill;
     [zoom >= 14] { text-size: 12; }
