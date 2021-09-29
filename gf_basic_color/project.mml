@@ -102,6 +102,18 @@ Layer:
       buffer-size: 64
       maxzoom: 22
       minzoom: 10
+  - id: place_labels
+    geometry: point
+    properties:
+      buffer-size: 128
+      maxzoom: 22
+      minzoom: 3
+  - id: boundary_labels
+    geometry: point
+    properties:
+      buffer-size: 0
+      maxzoom: 10
+      minzoom: 2
   - id: street_labels
     geometry: linestring
     Datasource:
@@ -128,18 +140,6 @@ Layer:
       buffer-size: 0
       maxzoom: 22
       minzoom: 4
-  - id: place_labels
-    geometry: point
-    properties:
-      buffer-size: 128
-      maxzoom: 22
-      minzoom: 3
-  - id: boundary_labels
-    geometry: point
-    properties:
-      buffer-size: 0
-      maxzoom: 10
-      minzoom: 2
   - id: aerialways
     geometry: linestring
     properties:
