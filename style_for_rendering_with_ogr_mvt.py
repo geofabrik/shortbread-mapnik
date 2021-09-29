@@ -34,6 +34,7 @@ for i in range(len(layers)):
         continue
     if int(layer_from.get("properties", {}).get("maxzoom", 24)) < args.zoom:
         continue
+    source_layer = layer_from.get("Datasource", {}).get("layer", layer_from["id"])
     result_layer = {
         "id": layer_from["id"],
         "geometry": layer_from["geometry"],
@@ -41,7 +42,7 @@ for i in range(len(layers)):
         "Datasource": {
             "file": "{}".format(tile_dir),
             "type": "ogr",
-            "layer": layer_from["id"]
+            "layer": source_layer
         },
         "srs-name": "900913",
         "extent": "-20037508,-20037508,20037508,20037508",

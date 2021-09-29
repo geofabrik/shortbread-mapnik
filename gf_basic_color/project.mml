@@ -70,12 +70,38 @@ Layer:
       buffer-size: 8
       maxzoom: 10
       minzoom: 0
-  - id: streets
+  - id: tunnels
     geometry: linestring
+    Datasource:
+      layer: streets
     properties:
       buffer-size: 64
       maxzoom: 22
       minzoom: 5
+  - id: streets-casing
+    geometry: linestring
+    Datasource:
+      layer: streets
+    properties:
+      buffer-size: 64
+      maxzoom: 22
+      minzoom: 5
+  - id: streets-fill
+    geometry: linestring
+    Datasource:
+      layer: streets
+    properties:
+      buffer-size: 64
+      maxzoom: 22
+      minzoom: 5
+  - id: bridges
+    geometry: linestring
+    Datasource:
+      layer: streets
+    properties:
+      buffer-size: 64
+      maxzoom: 22
+      minzoom: 10
 #  - id: street_labels
 #    geometry: linestring
 #    properties:
