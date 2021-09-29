@@ -997,15 +997,16 @@
 
   /* SERVICE FILL, ROAD FILL */
   [kind = 'road'][zoom >= 15],
-  [kind = 'service'][zoom >= 15 ] {
+  [kind = 'service'][service != 'driveway'][zoom >= 15 ],
+  [kind = 'service'][zoom >= 16 ] {
     line-color: @service-fill;
     line-cap: round;
     line-width: @service-width-z14 - 0.5 * @casing-width-z14;
 
-    [zoom >= 16] { line-width: @service-width-z16 - 0.5 * @casing-width-z16; }
-    [zoom >= 17] { line-width: @service-width-z17 - 0.5 * @casing-width-z17; }
-    [zoom >= 18] { line-width: @service-width-z18 - 0.5 * @casing-width-z18; }
-    [zoom >= 19] { line-width: @service-width-z19 - 0.5 * @casing-width-z19; }
+    [zoom >= 16] { line-width: @service-width-z16 - 2 * @casing-width-z16; }
+    [zoom >= 17] { line-width: @service-width-z17 - 2 * @casing-width-z17; }
+    [zoom >= 18] { line-width: @service-width-z18 - 2 * @casing-width-z18; }
+    [zoom >= 19] { line-width: @service-width-z19 - 2 * @casing-width-z19; }
 
       #bridges {
       line-width: @service-width-z14 - 2 * @bridge-casing-width-z14;
