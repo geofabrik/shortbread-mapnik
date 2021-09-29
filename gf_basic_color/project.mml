@@ -34,18 +34,6 @@ Layer:
       buffer-size: 0
       maxzoom: 22
       minzoom: 0
-  - id: water_polygons
-    geometry: polygon
-    properties:
-      buffer-size: 0
-      maxzoom: 22
-      minzoom: 4
-  - id: water_lines
-    geometry: linestring
-    properties:
-      buffer-size: 0
-      maxzoom: 22
-      minzoom: 4
   - id: land
     geometry: polygon
     properties:
@@ -58,6 +46,18 @@ Layer:
       buffer-size: 0
       maxzoom: 22
       minzoom: 14
+  - id: water_polygons
+    geometry: polygon
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 4
+  - id: water_lines
+    geometry: linestring
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 4
   - id: buildings
     geometry: polygon
     properties:
