@@ -356,6 +356,8 @@
         [zoom >= 19] { line-width: @motorway-link-width-z19; }
       }
       line-color: @motorway-low-zoom-casing;
+      line-join: round;
+      line-cap: round;
       [zoom >= 13] {
         line-color: @motorway-casing;
       }
@@ -364,7 +366,6 @@
         line-cap: butt;
       }
       #bridges {
-        line-join: round;
         line-cap: butt;
         [zoom >= 13] { line-color: @bridge-casing; }
       }
@@ -377,16 +378,15 @@
       [zoom >= 13] {
         line-color: @trunk-casing;
       }
+      line-cap: butt;
       line-width: @trunk-width-z12;
       [zoom >= 13] { line-width: @trunk-width-z13; }
       [zoom >= 15] { line-width: @trunk-width-z15; }
       [zoom >= 17] { line-width: @trunk-width-z17; }
       [zoom >= 18] { line-width: @trunk-width-z18; }
       [zoom >= 19] { line-width: @trunk-width-z19; }
-      #streets[tunnel != 1] {
-        line-join: round;
-        line-cap: round;
-      }
+      line-join: round;
+      line-cap: round;
       #tunnels {
         line-dasharray: 4,2;
         line-cap: butt;
@@ -418,8 +418,7 @@
         line-cap: butt;
       }
       #bridges {
-        line-join: round;
-          line-cap: butt;
+        line-cap: butt;
         [zoom >= 13] { line-color: @bridge-casing; }
       }
     }
@@ -440,7 +439,7 @@
       [zoom >= 18] { line-width: @secondary-width-z18; }
       [zoom >= 19] { line-width: @secondary-width-z19; }
       line-join: round;
-      line-cap: butt;
+      line-cap: round;
       #tunnels {
         line-dasharray: 4,2;
         line-cap: butt;
@@ -448,7 +447,6 @@
       #bridges {
         [zoom >= 13] {
           line-color: @bridge-casing;
-          line-join: round;
           line-cap: butt;
         }
       }
@@ -467,7 +465,7 @@
       [zoom >= 18] { line-width: @tertiary-width-z18; }
       [zoom >= 19] { line-width: @tertiary-width-z19; }
       line-join: round;
-      line-cap: butt;
+      line-cap: round;
       #tunnels {
         line-dasharray: 4,2;
         line-cap: butt;
@@ -494,7 +492,7 @@
       [zoom >= 18] { line-width: @residential-width-z18; }
       [zoom >= 19] { line-width: @residential-width-z19; }
       line-join: round;
-      line-cap: butt;
+      line-cap: round;
       #tunnels {
         line-dasharray: 4,2;
         line-cap: butt;
@@ -502,7 +500,6 @@
       #bridges {
         [zoom >= 14] {
           line-color: @bridge-casing;
-          line-join: round;
           line-cap: butt;
         }
       }
@@ -515,7 +512,7 @@
   [kind = 'service'][zoom >= 16] {
     line-color: @service-casing;
     line-join: round;
-    line-cap: butt;
+    line-cap: round;
     line-width: @service-width-z16;
     [zoom >= 17] { line-width: @service-width-z17; }
     [zoom >= 18] { line-width: @service-width-z18; }
@@ -526,7 +523,7 @@
     }
     #bridges {
       line-color: @bridge-casing;
-      line-join: round;
+      line-cap: butt;
       }
     }
 
@@ -541,7 +538,7 @@
       [zoom >= 18] { line-width: @pedestrian-width-z18; }
       [zoom >= 19] { line-width: @pedestrian-width-z19; }
       line-join: round;
-      line-cap: butt;
+      line-cap: round;
       #tunnels {
         line-dasharray: 4,2;
         line-cap: butt;
@@ -549,7 +546,7 @@
       #bridges {
         [zoom >= 14] {
           line-color: @bridge-casing;
-          line-join: round;
+          line-cap: butt;
         }
       }
     }
