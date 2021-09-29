@@ -1216,7 +1216,7 @@
   }
 }
 
-#streets::labels {
+#street_labels {
   [kind = 'motorway'],
   [kind = 'trunk'],
   [kind = 'primary'] {

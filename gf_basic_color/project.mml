@@ -102,12 +102,14 @@ Layer:
       buffer-size: 64
       maxzoom: 22
       minzoom: 10
-#  - id: street_labels
-#    geometry: linestring
-#    properties:
-#      buffer-size: 0
-#      maxzoom: 22
-#      minzoom: 12
+  - id: street_labels
+    geometry: linestring
+    Datasource:
+      layer: streets
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 12
 #  - id: street_labels_points
 #    geometry: point
 #    properties:
