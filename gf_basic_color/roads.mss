@@ -577,7 +577,7 @@
     }
   }
 
-  [kind = 'steps'] {
+  [kind = 'steps'],
   [kind = 'bridleway'],
   [kind = 'footway'],
   [kind = 'cycleway'],
@@ -624,6 +624,58 @@
         line-dasharray: 4,2;
         line-cap: butt;
         line-width: @track-width-z15 + 2 * (@paths-background-width + @paths-tunnel-casing-width);
+      }
+    }
+  }
+}
+
+#tunnels[tunnel = 1]::bridges_and_tunnels_casing,
+#bridges[bridge = 1]::bridges_and_tunnels_casing {
+  [kind = 'steps'],
+  [kind = 'bridleway'],
+  [kind = 'footway'],
+  [kind = 'cycleway'],
+  [kind = 'path'] {
+    #bridges {
+      [zoom >= 15] {
+        line-width: @cycleway-width-z15 + 2 * (@paths-background-width);
+        [zoom >= 16] { line-width: @cycleway-width-z16 + 2 * (@paths-background-width); }
+        [zoom >= 18] { line-width: @cycleway-width-z18 + 2 * (@paths-background-width); }
+        [zoom >= 19] { line-width: @cycleway-width-z19 + 2 * (@paths-background-width); }
+        line-color: @path-casing;
+        line-join: round;
+      }
+    }
+    #tunnels {
+      [zoom >= 15] {
+        line-width: @cycleway-width-z15 + 2 * (@paths-background-width);
+        [zoom >= 16] { line-width: @cycleway-width-z16 + 2 * (@paths-background-width); }
+        [zoom >= 18] { line-width: @cycleway-width-z18 + 2 * (@paths-background-width); }
+        [zoom >= 19] { line-width: @cycleway-width-z19 + 2 * (@paths-background-width); }
+        line-color: @path-casing;
+        line-dasharray: 4,2;
+        line-cap: butt;
+      }
+    }
+  }
+
+  [kind = 'track'] {
+    #bridges {
+      [zoom >= 15] {
+        line-color: @track-casing;
+        line-join: round;
+        line-width: @track-width-z15 + 2 * (@paths-background-width);
+        [tracktype = 'grade1'] {
+          line-width: @track-grade1-width-z15 + 2 * (@paths-background-width);
+        }
+      }
+    }
+    #tunnels {
+      [zoom >= 15] {
+        line-color: @track-casing;
+        line-dasharray: 4,2;
+        line-cap: butt;
+        line-width: @track-width-z15 + 2 * (@paths-background-width);
       }
     }
   }
