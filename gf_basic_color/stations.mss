@@ -1,18 +1,27 @@
 @station-color: #7981b0;
 @station-text: darken(saturate(@station-color, 15%), 10%);
+@aerodrome-color: #555;
 
 #public_transport {
-  [kind= 'aerodrome'][zoom >= 11] {
-    text-name: "[name]";
-    text-face-name: @book-fonts;
-    text-size: 14;
-    text-fill: @station-text;
-    text-dy: -13;
-    text-halo-radius: @standard-halo-radius * 1.5;
-    text-halo-fill: @standard-halo-fill;
-    text-wrap-width: 0;
-    text-placement: interior;
+  /*[kind = 'aerodrome'][iata != null][zoom >= 11],*/
+  [kind = 'aerodrome'][zoom >= 14] {
+    [iata != null][zoom >= 12],
+    [zoom >= 14] {
+      text-name: "[name]";
+      text-face-name: @book-fonts;
+      text-size: 10;
+      text-fill: @aerodrome-color;
+      text-dy: -14;
+      text-halo-radius: @standard-halo-radius * 1.5;
+      text-halo-fill: @standard-halo-fill;
+      text-wrap-width: 0;
+      text-placement: interior;
+    }
+    marker-file: url('symbols/aerodrome.12.svg');
+    marker-clip: false;
+    marker-fill: @aerodrome-color;
   }
+
 
   [kind = 'station'][zoom >= 14] {
     marker-file: url('symbols/square.svg');
