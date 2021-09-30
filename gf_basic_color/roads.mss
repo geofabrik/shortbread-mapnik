@@ -883,13 +883,9 @@
 
   [kind = 'residential'],
   [kind = 'unclassified'] {
-    [zoom = 12][kind = 'residential'] {
+    [zoom = 12] {
       line-color: @unimportant-road;
       line-width: 0.4;
-    }
-    [zoom = 12][kind = 'unclassified'] {
-      line-color: @unimportant-road;
-      line-width: 1;
     }
     [zoom >= 13] {
       line-width: @residential-width-z13 - 2 * @residential-casing-width-z13;
