@@ -1033,10 +1033,10 @@
       line-join: round;
       line-cap: butt;
       line-width: @bridleway-width-z15;
-    }
-    #tunnels {
-      line/line-join: round;
-      line/line-cap: butt;
+      #tunnels {
+        line-join: round;
+        line-cap: butt;
+      }
     }
   }
 
