@@ -5,7 +5,7 @@
 #public_transport {
   /*[kind = 'aerodrome'][iata != null][zoom >= 11],*/
   [kind = 'aerodrome'][zoom >= 14] {
-    [iata != null][zoom >= 12],
+    /*[iata != null][zoom >= 12],*/
     [zoom >= 14] {
       text-name: "[name]";
       text-face-name: @book-fonts;
