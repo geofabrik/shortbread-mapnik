@@ -1112,6 +1112,34 @@
   }
 }
 
+#street_labels_points[kind = 'motorway_junction'] {
+  [zoom >= 12] {
+    text-name: "[ref]";
+    text-size: 10;
+    text-fill: @junction-text-color;
+    text-min-distance: 2;
+    text-face-name: @oblique-fonts;
+    text-halo-radius: @standard-halo-radius;
+    text-wrap-character: ";";
+    text-wrap-width: 2; // effectively break after every wrap character
+    text-line-spacing: -1.5; // -0.15 em
+    text-clip: false;
+    [zoom >= 14] {
+      ["name" != null]["ref" = null] {
+        text-name: "[name]";
+      }
+      ["name" != null]["ref" != null] {
+        text-name: [name] + "\n" + [ref];
+      }
+    }
+    [zoom >= 15] {
+      text-size: 11;
+      text-line-spacing: -1.65; // -0.15 em
+    }
+  }
+}
+
+
 #street_labels {
   [kind = 'motorway'],
   [kind = 'trunk'],

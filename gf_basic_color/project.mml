@@ -122,12 +122,12 @@ Layer:
       buffer-size: 0
       maxzoom: 22
       minzoom: 12
-#  - id: street_labels_points
-#    geometry: point
-#    properties:
-#      buffer-size: 0
-#      maxzoom: 22
-#      minzoom: 12
+  - id: street_labels_points
+    geometry: point
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 12
   - id: water_lines_labels
     geometry: linestring
     properties:
