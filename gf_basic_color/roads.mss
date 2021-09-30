@@ -52,6 +52,7 @@
 @runway-fill: @aeroway-fill;
 @taxiway-fill: @aeroway-fill;
 @helipad-fill: @aeroway-fill;
+@rail-fill: #ababab;
 @access-marking: #eaeaea;
 @access-marking-living-street: #cccccc;
 
@@ -1096,11 +1097,16 @@
     }
   }
 
-  [rail = 1] {
-    [zoom > 8] {
-      line-color: #ababab;
-      line-width: 0.5;
-      [zoom >= 8] { line-width: 0.8; }
+  [kind = 'rail'] {
+    [zoom >= 9][service = null],
+    [zoom >= 9][service = ''],
+    [zoom >= 14] {
+      line-color: @rail-fill;
+      [zoom <= 15][service != null][service != ''][service != 'crossover'] {
+        line-color: lighten(@rail-fill, 20%);
+      }
+      line-width: 1;
+      [zoom >= 9] { line-width: 0.8; }
       [zoom >= 12] { line-width: 0.9; }
       line-join: round;
       #tunnels {
