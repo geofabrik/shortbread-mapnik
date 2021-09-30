@@ -1,4 +1,4 @@
-@aerialway: #ff0000; //#808080;
+@aerialway: #808080;
 
 #aerialways {
   [kind = 'cable_car'],
