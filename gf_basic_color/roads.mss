@@ -1095,21 +1095,24 @@
     }
   }
 
-  [kind = 'rail'] {
-    [zoom >= 9][service = null],
-    [zoom >= 9][service = ''],
-    [zoom >= 14] {
-      line-color: @rail-fill;
-      [zoom <= 15][service != null][service != ''][service != 'crossover'] {
-        line-color: lighten(@rail-fill, 20%);
-      }
-      line-width: 1;
-      [zoom >= 9] { line-width: 0.8; }
-      [zoom >= 12] { line-width: 0.9; }
-      line-join: round;
-      #tunnels {
-        line-dasharray: 8,8;
-      }
+  [kind = 'rail'][zoom >= 9][zoom < 14][service = null],
+  [kind = 'rail'][zoom >= 9][zoom < 14][service = ''],
+  [kind = 'rail'][zoom >= 14],
+  [kind = 'narrow_gauge'][zoom >= 10],
+  [kind = 'subway'][zoom >= 12],
+  [kind = 'light_rail'][zoom >= 12],
+  [kind = 'tram'][zoom >= 13],
+  [kind = 'funicular'][zoom >= 14] {
+    line-color: @rail-fill;
+    [zoom <= 15][service != null][service != ''][service != 'crossover'] {
+      line-color: lighten(@rail-fill, 20%);
+    }
+    line-width: 1;
+    [zoom >= 9] { line-width: 0.8; }
+    [zoom >= 12] { line-width: 0.9; }
+    line-join: round;
+    #tunnels {
+      line-dasharray: 8,8;
     }
   }
 }
