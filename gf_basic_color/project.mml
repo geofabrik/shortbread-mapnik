@@ -77,6 +77,15 @@ Layer:
     properties:
       buffer-size: 64
       maxzoom: 22
+      minzoom: 12
+# streets-casing-low renders all roads up to the zoom level where tunnels are rendered on a sperate layer.
+  - id: streets-casing-low
+    geometry: linestring
+    Datasource:
+      layer: streets
+    properties:
+      buffer-size: 64
+      maxzoom: 11
       minzoom: 5
   - id: streets-casing
     geometry: linestring
@@ -85,6 +94,14 @@ Layer:
     properties:
       buffer-size: 64
       maxzoom: 22
+      minzoom: 12
+  - id: streets-fill-low
+    geometry: linestring
+    Datasource:
+      layer: streets
+    properties:
+      buffer-size: 64
+      maxzoom: 11
       minzoom: 5
   - id: streets-fill
     geometry: linestring
@@ -93,7 +110,7 @@ Layer:
     properties:
       buffer-size: 64
       maxzoom: 22
-      minzoom: 5
+      minzoom: 12
   - id: bridges
     geometry: linestring
     Datasource:
@@ -101,7 +118,7 @@ Layer:
     properties:
       buffer-size: 64
       maxzoom: 22
-      minzoom: 10
+      minzoom: 12
   - id: place_labels
     geometry: point
     properties:

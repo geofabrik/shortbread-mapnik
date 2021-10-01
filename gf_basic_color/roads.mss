@@ -310,6 +310,7 @@
 
 #tunnels::casing[tunnel=1],
 #bridges::casing[bridge=1],
+#streets-casing-low::casing,
 #streets-casing::casing[bridge!=1][tunnel!=1] {
   [zoom = 9][kind = 'secondary'] {
     line-color: @halo-color-for-minor-road;
@@ -684,6 +685,7 @@
 
 #tunnels::fill[tunnel = 1],
 #bridges::fill[bridge = 1],
+#streets-fill-low::fill,
 #streets-fill::fill[bridge != 1][tunnel != 1] {
   [kind = 'motorway'] {
     [zoom >= 5] {
