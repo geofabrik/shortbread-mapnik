@@ -692,16 +692,16 @@
       line-color: lighten(@motorway-low-zoom, 20%);
       line-width: @motorway-width-z5;
     }
-    [zoom >= 6] {
+    [zoom >= 6][link != 1] {
       line-color: lighten(@motorway-low-zoom, 10%);
       line-width: @motorway-width-z5;
     }
-    [zoom >= 7] {
+    [zoom >= 7][link != 1] {
       line-color: @motorway-low-zoom;
       line-width: @motorway-width-z7;
     }
-    [zoom >= 8] { line-width: @motorway-width-z8; }
-    [zoom >= 9] { line-width: @motorway-width-z9; }
+    [zoom >= 8][link != 1] { line-width: @motorway-width-z8; }
+    [zoom >= 9][link != 1] { line-width: @motorway-width-z9; }
     [zoom >= 10] { line-width: @motorway-width-z10; }
     [zoom >= 11] { line-width: @motorway-width-z11; }
     [zoom >= 12] {
