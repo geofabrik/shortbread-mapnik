@@ -1145,7 +1145,7 @@
 }
 
 
-#street_labels {
+#street_labels[name != null][name != ''] {
   [kind = 'motorway'],
   [kind = 'trunk'],
   [kind = 'primary'] {
@@ -1157,7 +1157,7 @@
       text-clip: false;
       text-placement: line;
       text-face-name: @book-fonts;
-      [tunnel = 'no'] {
+      [tunnel != 1] {
         text-halo-radius: @standard-halo-radius;
         [kind = 'motorway'] { text-halo-fill: @motorway-fill; }
         [kind = 'trunk'] { text-halo-fill: @trunk-fill; }
@@ -1295,11 +1295,10 @@
 }
 
 
-/*#streets::shields[zoom < 13] {
+#street_shields[zoom < 13] {
   [kind = 'motorway'][zoom >= 10],
   [kind = 'trunk'][zoom >= 12],
-  [kind = 'primary'][zoom >= 12],
-  [kind = 'secondary'][zoom >= 13] {
+  [kind = 'primary'][zoom >= 12] {
     shield-name: "[ref]";
     shield-size: @shield-size;
     shield-placement: line;
@@ -1322,15 +1321,10 @@
       shield-fill: @primary-shield;
       shield-file: url("symbols/shields/primary_[ref_cols]x[ref_rows].svg");
     }
-
-    [kind = 'secondary'] {
-      shield-fill: @secondary-shield;
-      shield-file: url("symbols/shields/secondary_[ref_cols]x[ref_rows].svg");
-    }
   }
-}*/
+}
 
-/*#streets::shieldsdetail {
+#streets_shields[ref != null][ref != ''] {
   [kind = 'motorway'],
   [kind = 'trunk'],
   [kind = 'primary'],
@@ -1449,6 +1443,6 @@
       text-halo-fill: @standard-halo-fill;
     }
   }
-}*/
+}
 
 
