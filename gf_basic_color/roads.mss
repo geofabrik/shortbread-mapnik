@@ -688,22 +688,32 @@
 #streets-fill-low::fill,
 #streets-fill::fill[bridge != 1][tunnel != 1] {
   [kind = 'motorway'] {
-    [zoom >= 5] {
-      line-color: lighten(@motorway-low-zoom, 20%);
-      line-width: @motorway-width-z5;
+    [zoom >= 5][zoom < 12][link != 1] {
+      [zoom >= 5][zoom < 6] {
+        line-color: lighten(@motorway-low-zoom, 20%);
+        line-width: @motorway-width-z5;
+      }
+      [zoom >= 6][zoom < 7] {
+        line-color: lighten(@motorway-low-zoom, 10%);
+        line-width: @motorway-width-z5;
+      }
+      [zoom >= 7] {
+        line-color: @motorway-low-zoom;
+        line-width: @motorway-width-z7;
+      }
+      [zoom >= 8] {
+        line-width: @motorway-width-z8;
+      }
+      [zoom >= 9] {
+        line-width: @motorway-width-z9;
+      }
+      [zoom >= 10] {
+        line-width: @motorway-width-z10;
+      }
+      [zoom >= 11] {
+        line-width: @motorway-width-z11;
+      }
     }
-    [zoom >= 6][link != 1] {
-      line-color: lighten(@motorway-low-zoom, 10%);
-      line-width: @motorway-width-z5;
-    }
-    [zoom >= 7][link != 1] {
-      line-color: @motorway-low-zoom;
-      line-width: @motorway-width-z7;
-    }
-    [zoom >= 8][link != 1] { line-width: @motorway-width-z8; }
-    [zoom >= 9][link != 1] { line-width: @motorway-width-z9; }
-    [zoom >= 10] { line-width: @motorway-width-z10; }
-    [zoom >= 11] { line-width: @motorway-width-z11; }
     [zoom >= 12] {
       line-color: @motorway-fill;
       line-width: @motorway-width-z12 - 2 * @major-casing-width-z12;
