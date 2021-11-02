@@ -1298,7 +1298,8 @@
 #street_shields[zoom < 13] {
   [kind = 'motorway'][zoom >= 10],
   [kind = 'trunk'][zoom >= 12],
-  [kind = 'primary'][zoom >= 12] {
+  [kind = 'primary'][zoom >= 12],
+  [kind = 'secondary'][zoom >= 13] {
     shield-name: "[ref]";
     shield-size: @shield-size;
     shield-placement: line;
@@ -1320,6 +1321,11 @@
     [kind = 'primary'] {
       shield-fill: @primary-shield;
       shield-file: url("symbols/shields/primary_[ref_cols]x[ref_rows].svg");
+    }
+
+    [kind = 'secondary'] {
+      shield-fill: @secondary-shield;
+      shield-file: url("symbols/shields/secondary_[ref_cols]x[ref_rows].svg");
     }
   }
 }
