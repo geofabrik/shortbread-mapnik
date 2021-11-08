@@ -86,7 +86,7 @@ Layer:
     properties:
       buffer-size: 64
       maxzoom: 11
-      minzoom: 5
+      minzoom: 9
   - id: streets-casing
     geometry: linestring
     Datasource:
@@ -102,7 +102,7 @@ Layer:
     properties:
       buffer-size: 64
       maxzoom: 11
-      minzoom: 9
+      minzoom: 5
   - id: streets-fill
     geometry: linestring
     Datasource:
