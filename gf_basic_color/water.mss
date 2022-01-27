@@ -6,6 +6,7 @@
 
 #ocean {
   polygon-fill: @water;
+  polygon-gamma: 0.5;
 }
 
 #water_polygons {
