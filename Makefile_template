@@ -1,0 +1,103 @@
+THISDIR=$(shell pwd)
+CARTO=carto
+TILEDIR=vectortiles
+
+XMLFILES=$(shell for ZOOM in `seq 0 14`; do echo -n "gf_basic_$(STYLE)_z$${ZOOM}.xml "; done)
+MMLFILES=$(shell for ZOOM in `seq 0 14`; do echo -n "gf_basic_$(STYLE)_z$${ZOOM}.mml "; done)
+MSS=admin.mss aerialways.mss buildings.mss land.mss roads.mss stations.mss style.mss water-features.mss water.mss gf_basic_$(STYLE)_colors.mss
+MSSFILES=$(shell for M in $(MSS) ; do echo -n "style/$${M} "; done)
+
+all: $(XMLFILES)
+
+clean: $(XMLFILES) $(MMLFILES)
+	rm -f $^
+
+gf_basic_$(STYLE)_z0.xml: gf_basic_$(STYLE)_z0.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z1.xml: gf_basic_$(STYLE)_z1.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z2.xml: gf_basic_$(STYLE)_z2.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z3.xml: gf_basic_$(STYLE)_z3.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z4.xml: gf_basic_$(STYLE)_z4.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z5.xml: gf_basic_$(STYLE)_z5.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z6.xml: gf_basic_$(STYLE)_z6.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z7.xml: gf_basic_$(STYLE)_z7.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z8.xml: gf_basic_$(STYLE)_z8.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z9.xml: gf_basic_$(STYLE)_z9.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z10.xml: gf_basic_$(STYLE)_z10.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z11.xml: gf_basic_$(STYLE)_z11.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z12.xml: gf_basic_$(STYLE)_z12.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z13.xml: gf_basic_$(STYLE)_z13.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z14.xml: gf_basic_$(STYLE)_z14.mml $(MSSFILES)
+	$(CARTO) $^ > $@
+
+gf_basic_$(STYLE)_z0.mml: gf_basic_$(STYLE).mml
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 0 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z1.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 1 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z2.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 2 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z3.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 3 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z4.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 4 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z5.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 5 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z6.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 6 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z7.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 7 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z8.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 8 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z9.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 9 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z10.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 10 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z11.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 11 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z12.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 12 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z13.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 13 $< $(TILEDIR) > $@
+
+gf_basic_$(STYLE)_z14.mml: gf_basic_$(STYLE).mml 
+	$(THISDIR)/style_for_rendering_with_ogr_mvt.py -z 14 $< $(TILEDIR) > $@
