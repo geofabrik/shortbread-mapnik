@@ -74,8 +74,6 @@
 @pedestrian-fill: #ffffff;
 @raceway-fill: #ffffff;
 @road-fill: #ffffff;
-@track-fill: darken(@residential-fill, 20%);
-@track-fill-noaccess: #ffffff;
 @footway-fill: #ffffff;
 @footway-fill-noaccess: #ffffff;
 @steps-fill: @footway-fill;
@@ -84,6 +82,8 @@
 @cycleway-fill-noaccess: #ffffff;
 @bridleway-fill: @track-fill;
 @bridleway-fill-noaccess: #ffffff;
+@track-fill: darken(@residential-fill, 20%);
+@track-fill-noaccess: #ffffff;
 @aeroway-fill: #bbc;
 @runway-fill: @aeroway-fill;
 @taxiway-fill: @aeroway-fill;
