@@ -1,5 +1,5 @@
 #boundaries {
-  [admin_level = '2'] {
+  [admin_level = 2] {
     [zoom >= 1] {
       background/line-join: bevel;
       background/line-color: white;
@@ -30,7 +30,7 @@
     }
   }
 
-  [admin_level = '4'] {
+  [admin_level = 4] {
     [zoom >= 7] {
       background/line-join: bevel;
       background/line-color: white;
