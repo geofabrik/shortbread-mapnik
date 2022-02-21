@@ -66,7 +66,7 @@
 #boundary_labels {
   /* way_area is in ha, not m². */
   [zoom >= 3][admin_level = "2"][way_area > 10E6] {
-      text-name:           "[name_de]";
+      text-name:           "[name]";
       text-size:           10;
       text-wrap-width:     35;
       text-line-spacing:   -1.5;
@@ -81,7 +81,7 @@
    }
 
    [zoom >= 7][admin_level = "4"][way_area > 10E4] {
-      text-name: "[name_de]";
+      text-name: "[name]";
       text-size: 10;
       text-wrap-width: 30; // 3.0 em
       text-line-spacing: -1.5; // -0.15 em
@@ -102,7 +102,7 @@
     shield-file: url('symbols/place/place-capital-6.svg');
     shield-text-dx: 6;
     shield-text-dy: 6;
-    shield-name: '[name_en]';
+    shield-name: '[name]';
     shield-face-name: @book-fonts;
     shield-fill: @place;
     shield-size: 11;
@@ -130,7 +130,7 @@
       shield-file: url('symbols/place/place-capital-6.svg');
       shield-text-dx: 6;
       shield-text-dy: 6;
-      shield-name: '[name_en]';
+      shield-name: '[name]';
       shield-face-name: @book-fonts;
       shield-fill: @place;
       shield-size: 12;
@@ -149,7 +149,7 @@
     }
 
     [zoom >= 10] {
-      text-name: '[name_en]';
+      text-name: '[name]';
       text-face-name: @book-fonts;
       text-fill: @place;
       text-size: 14;
@@ -163,7 +163,7 @@
 
   [kind = "town"] {
     [zoom >= 9] {
-      text-name: "[name_en]";
+      text-name: "[name]";
       text-size: 10;
       text-fill: @place;
       text-face-name: @book-fonts;
@@ -195,7 +195,7 @@
 
   [kind = 'suburb'][zoom >= 12],
   [kind = 'village'][zoom >= 12] {
-    text-name: "[name_en]";
+    text-name: "[name]";
     text-size: 10;
     text-fill: @place;
     text-face-name: @book-fonts;
@@ -237,7 +237,7 @@
   [kind = 'isolated_dwelling'],
   [kind = 'farm'] {
     [zoom >= 15] {
-      text-name: "[name_en]";
+      text-name: "[name]";
       text-size: 10;
       text-fill: @place;
       text-face-name: @book-fonts;
@@ -254,7 +254,7 @@
 
   [kind = 'island'] {
     [zoom >= 10] {
-      text-name: "[name_en]";
+      text-name: "[name]";
       text-size: 12;
       text-fill: @place;
       text-face-name: @oblique-fonts;
