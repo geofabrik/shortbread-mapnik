@@ -127,6 +127,7 @@
   }
 
   [kind = "capital"][zoom >= 7][zoom <= 12],
+  [kind = "state_capital"][zoom >= 7][zoom <= 12],
   [kind = "city"][zoom <= 12] {
     [zoom >= 7] {
       shield-file: url('symbols/place/place-capital-6.svg');
