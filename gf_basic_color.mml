@@ -69,7 +69,7 @@ Layer:
     geometry: linestring
     properties:
       buffer-size: 8
-      maxzoom: 10
+      maxzoom: 22
       minzoom: 0
   - id: tunnels
     geometry: linestring
