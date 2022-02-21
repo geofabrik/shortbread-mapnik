@@ -47,7 +47,8 @@
     [zoom >= 18] { line-width: 12; }
   }
 
-  [kind = 'stream'][zoom >= 14] {
+  [kind = 'drain'][zoom >= 14],
+  [kind = 'stream'][zoom >= 13] {
     line-color: @water;
     line-width: 2;
     [zoom >= 15] { line-width: 3;}
