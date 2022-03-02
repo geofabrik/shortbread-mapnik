@@ -121,18 +121,18 @@ Layer:
       buffer-size: 64
       maxzoom: 22
       minzoom: 12
-  - id: place_labels
-    geometry: point
-    properties:
-      buffer-size: 128
-      maxzoom: 22
-      minzoom: 3
   - id: boundary_labels
     geometry: point
     properties:
       buffer-size: 0
       maxzoom: 10
       minzoom: 2
+  - id: place_labels
+    geometry: point
+    properties:
+      buffer-size: 128
+      maxzoom: 22
+      minzoom: 3
   - id: street_shields
     geometry: linestring
     Datasource:
