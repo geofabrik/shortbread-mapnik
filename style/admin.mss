@@ -65,7 +65,7 @@
 
 #boundary_labels {
   /* way_area is in ha, not m². */
-  [zoom >= 3][admin_level = "2"][way_area > 10E6] {
+  [zoom >= 3][admin_leve = "2"][way_area > 0.00008] {
       text-name:           "[name]";
       text-size:           10;
       text-wrap-width:     35;
@@ -80,7 +80,7 @@
       text-character-spacing: 0.5;
    }
 
-   [zoom >= 7][admin_level = "4"][way_area > 10E4] {
+   [zoom >= 7][admin_leve = "4"][way_area > 0.0000008] {
       text-name: "[name]";
       text-size: 10;
       text-wrap-width: 30; // 3.0 em
