@@ -1,4 +1,4 @@
-#street_shields[zoom < 13][ref != null][ref != ''] {
+#street_shields[zoom < 13][ref_cols >= 1][ref_cols <= 11][ref_rows >= 1][ref_rows <= 4] {
   [kind = 'motorway'][zoom >= 10],
   [kind = 'trunk'][zoom >= 12],
   [kind = 'primary'][zoom >= 12],
@@ -33,7 +33,7 @@
   }
 }
 
-#streets_shields[ref != null][ref != ''] {
+#streets_shields[ref_cols >= 1][ref_cols <= 11][ref_rows >= 1][ref_rows <= 4] {
   [kind = 'motorway'],
   [kind = 'trunk'],
   [kind = 'primary'],
