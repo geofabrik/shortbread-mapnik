@@ -1,4 +1,4 @@
-#street_shields[zoom < 13] {
+#street_shields[zoom < 13][ref != null][ref != ''] {
   [kind = 'motorway'][zoom >= 10],
   [kind = 'trunk'][zoom >= 12],
   [kind = 'primary'][zoom >= 12],
