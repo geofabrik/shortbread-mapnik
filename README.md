@@ -38,5 +38,5 @@ in the Git history.
 
 ## License and Copyright
 
-Because this set of configuration files is intended to go with our vector tile schema,
-it is released under the same license as tilemaker itself, the [FTWPL license](./LICENCE.txt).
+You are free to use this map style under the same license that applies to the 
+tilemaker software, the [FTWPL license](./LICENCE.txt).
