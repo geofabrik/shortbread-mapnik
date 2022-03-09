@@ -19,7 +19,7 @@
 The map style uses the OGR input plugin of Mapnik and [GDAL's MVT driver](https://gdal.org/drivers/vector/mvt.html) to use vector tiles as data source.
 This leads to a few oddities compared to established Mapnik styles for raster tile rendering:
 
-* Due to a bug/feature in OGR that needs sorting out, we need one map style per input zoom level, i.e. one XML file for zoom 0, one for zoom 1, … one for zoom 13 and one for zoom 14+.
+* Due to a bug/feature in OGR that needs sorting out, we currently need one map style per input zoom level, i.e. one XML file for zoom 0, one for zoom 1, … one for zoom 13 and one for zoom 14+. The Tirex queue manager has a [feature](https://github.com/openstreetmap/tirex/commit/7e7c3e76cea92527dffa74aca8386cf38fe6d71a) that allows one to present this collection of different styles as one map style to the outside again but in the long run OGR needs to be modified to not default to the highest available vector tile zoom level for any rendering request.
 * The file parameter of the data source in the Mapnik style has to point to the directory of the zoom level. GDAL expects a `metadata.json` file the parent directory of the zoom level. That file specifies the layer and their geometry types. Without the information about the geometry, GDAL will do a sequential read on all vector tiles on that zoom level in order to detect the geometry type for each layer.
 * Vector tiles have to contain the features in the order they should be rendered on the map because the OGR data source does not support sorting. 
 
