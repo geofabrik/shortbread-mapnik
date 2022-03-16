@@ -1,6 +1,6 @@
 scale: 1
 metatile: 2
-name: Geofabrik Basic Colour
+name: Shortbread-Mapnik
 description: An OpenStreetMap Mapnik style to be used as a base map, in CartoCSS
 bounds: &world
   - -180
