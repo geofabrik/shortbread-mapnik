@@ -1,21 +1,21 @@
-all: color
+all: shortbread_mapnik
 
 CARTO=/usr/local/bin/carto
 #CARTO=./node_modules/.bin/carto
 TILEDIR=vectortiles
 
 
-color:
-	$(MAKE) STYLE=$@ gf_basic_$@_z0.xml gf_basic_$@_z1.xml gf_basic_$@_z2.xml gf_basic_$@_z3.xml gf_basic_$@_z4.xml gf_basic_$@_z5.xml gf_basic_$@_z6.xml gf_basic_$@_z7.xml gf_basic_$@_z8.xml gf_basic_$@_z9.xml gf_basic_$@_z10.xml gf_basic_$@_z11.xml gf_basic_$@_z12.xml gf_basic_$@_z13.xml gf_basic_$@_z14.xml
+shortbread_mapnik:
+	$(MAKE) STYLE=$@ $@_z0.xml $@_z1.xml $@_z2.xml $@_z3.xml $@_z4.xml $@_z5.xml $@_z6.xml $@_z7.xml $@_z8.xml $@_z9.xml $@_z10.xml $@_z11.xml $@_z12.xml $@_z13.xml $@_z14.xml
 
 %.xml: %.mml style/*.mss
 	$(eval TEMPFILE=$(shell mktemp tmp.$@.XXXXXX))
 	$(CARTO) $^ > $(TEMPFILE)
 	mv $(TEMPFILE) $@
 
-gf_basic_$(STYLE)_z%.mml: gf_basic_$(STYLE).mml
+$(STYLE)_z%.mml: $(STYLE).mml
 	./style_for_rendering_with_ogr_mvt.py -z $* $< $(TILEDIR) > $@
 
 clean:
-	-rm -f gf_basic_*_z*.xml
-	-rm -f tmp.gf_basic_*_z*.xml*
+	-rm -f shortbread_mapnik_z*.xml
+	-rm -f tmp.shortbread_mapnik_z*.xml*
