@@ -5,8 +5,14 @@
 * Create vector tiles using the [Geofabrik Basic vector tile schema](https://github.com/geofabrik/geofabrik-basicvt-tilemaker).
 * Convert the .mbtiles file returned by Tilemaker into plain z/x/y.pbf structure using [mbutil](https://github.com/mapbox/mbutil).
 * Add geometry types to the `metadata.json` file of the vector tile tileset using the [add_geometry_types.py](https://github.com/geofabrik/geofabrik-basicvt-tilemaker/blob/main/add_geometry_types.py) script.
-* Edit the Makefile, specify path to the [Carto](https://github.com/mapbox/carto) executable and the directory of the vectortiles.
-* Build map styles for zoom levels 0 to 14 using `cd gf_basic_color && make`.
+* Run `make`.
+  Some Makefile variables are used, There are sensible defaults.
+    `CARTO`:: defined the the path to the `carto` binary. The default works if
+       you ran `npm install -g carto`. Use `CARTO=./node_modules/.bin/carto`
+	   if you ran `npm install carto` in the root of the project
+	`TILEDIR`:: Path where MVTs are loaded from. Default is `vectortiles` in
+	   the root of the project
+  e.g. `make CARTO=/usr/local/bin/carto TILEDIR=/bigdisk/vtiles all`
 
 ## Technical Notes
 
