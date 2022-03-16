@@ -1,8 +1,3 @@
-@building-fill: #E4E0E0;			
-@building-line: darken(@building-fill, 15%);
-@building-low-zoom: darken(@building-fill, 4%);
-
-
 #buildings {
   [zoom >= 13] {
     polygon-fill: @building-low-zoom;
@@ -26,9 +21,6 @@
 
 
 /* Features related to (postal) adresses: */
-
-@address-color: #666;
-
 #addresses {
   [zoom >= 17] {
     text-name: "[name]";

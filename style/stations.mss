@@ -1,7 +1,3 @@
-@station-color: #7981b0;
-@station-text: darken(saturate(@station-color, 15%), 10%);
-@aerodrome-color: #555;
-
 #public_transport {
   /*[kind = 'aerodrome'][iata != null][zoom >= 11],*/
   [kind = 'aerodrome'][zoom >= 14] {

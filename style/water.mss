@@ -1,9 +1,3 @@
-@water:      #c4dff6;
-@glacier:    #EFF6FD;
-@glacier-line: @water;
-
-@water-text:  #6699cc;
-
 #ocean {
   polygon-fill: @water;
   polygon-gamma: 0.5;

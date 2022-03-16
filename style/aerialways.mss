@@ -1,5 +1,3 @@
-@aerialway: #808080;
-
 #aerialways {
   [kind = 'cable_car'],
   [kind = 'gondola'] {

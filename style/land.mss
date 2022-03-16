@@ -1,13 +1,3 @@
-@forest:    #D3E3C3; 
-@grass:     #E4EEDA;
-@cemetery:  #D6DED2;
-@quarry:    #DDDCD8;
-@builtup:   #ECEAE1;
-@farmland:    @land;            
-@beach:        #fff1ba;
-@pier:        @land;
-@societal:  #FFF5CC;
-
 #land {
   [kind = 'pier'] {
     polygon-fill: @pier;    

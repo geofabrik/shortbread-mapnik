@@ -1,10 +1,3 @@
-@breakwater-color: #aaa; /* Also for groyne */
-@dam: #adadad;
-@dam-line: #aaa;
-@weir-line: #aaa;
-@lock-gate: #aaa;
-@lock-gate-line: #aaa;
-
 #water-barriers-point, #water-barriers-line, #water-barriers-poly {
   [waterway = 'dam'] {
     #water-barriers-poly[zoom >= 15] {
@@ -95,13 +88,13 @@
   [zoom >= 14] {
     a/line-width: 1;
     a/line-offset: -0.5;
-    a/line-color: blue;
+    a/line-color: @marina-color;
     a/line-opacity: 0.1;
     a/line-join: round;
     a/line-cap: round;
     b/line-width: 3;
     b/line-offset: -1.5;
-    b/line-color: blue;
+    b/line-color: @marina-color;
     b/line-opacity: 0.1;
     b/line-join: round;
     b/line-cap: round;

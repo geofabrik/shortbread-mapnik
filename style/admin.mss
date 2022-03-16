@@ -1,9 +1,3 @@
-@admin-boundaries: #663300;
-@state: desaturate(darken(@admin-boundaries, 5%), 20%);
-@country: darken(@admin-boundaries, 5%);
-@place: #555;
-@place-light: #888;
-
 #boundaries {
   [admin_level = '2'] {
     [zoom >= 1] {
