@@ -1,10 +1,11 @@
 #land {
   [kind = 'pier'] {
     polygon-fill: @pier;    
-
+    polygon-gamma: 0.3;
   }
 
-  [kind = 'forest'] {
+  [kind = 'forest'][zoom >= 7] {
+    polygon-gamma: 0.3;
     [zoom = 7] {
       polygon-fill: @forest-zoom7;
     }
@@ -22,6 +23,7 @@
   [kind = 'forest'],
   [kind = 'wood'] {
     [zoom >= 11] {
+      polygon-gamma: 0.3;
       polygon-fill: @forest;
       /*[way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }*/
@@ -54,6 +56,7 @@
   [kind = 'garden'] {
     [zoom >= 11] {
       polygon-fill: @grass;
+      polygon-gamma: 0.3;
       [kind = 'grass'],
       [kind = 'meadow'],
       [kind = 'allotments'],
@@ -74,6 +77,7 @@
   [kind = 'grave_yard'] {
     [zoom >= 13] {
       polygon-fill: @cemetery;
+      polygon-gamma: 0.3;
     }
   }
  
@@ -93,6 +97,7 @@
   [kind = 'farmland'] {
      [zoom >= 10] { 
        polygon-fill: @farmland;
+       polygon-gamma: 0.3;
        /*[way_pixels >= 4]  { polygon-gamma: 0.75; }
        [way_pixels >= 64] { polygon-gamma: 0.3;  }*/
      }
@@ -103,6 +108,7 @@
   [kind = 'shingle'],
   [kind = 'quarry'][zoom >= 11] {
       polygon-fill: @quarry;
+      polygon-gamma: 0.3;
       /*[way_pixels >= 4]  { polygon-gamma: 0.75; }
       [way_pixels >= 64] { polygon-gamma: 0.3;  }*/
   }
@@ -128,6 +134,7 @@
   [kind = 'hospital'] {
     [zoom >= 14] {
       polygon-fill: @societal;
+      polygon-gamma: 0.3;
     }
   }
 }

@@ -6,6 +6,7 @@
 #water_polygons {
   [kind = 'glacier'] {
     polygon-fill: @glacier;
+    polygon-gamma: 0.3;
     line-color: @glacier-line;
     line-width: 0.4;
     [zoom >= 9] { line-width: 0.7; }
@@ -17,13 +18,16 @@
   [kind = 'reservoir'],
   [kind = 'basin'] {
     polygon-fill: @water;
+    polygon-gamma: 0.3;
   }
 
   [kind = 'riverbank'] {
     polygon-fill: @water;
+    polygon-gamma: 0.3;
   }
   [kind = 'canal'] {
     polygon-fill: @water;
+    polygon-gamma: 0.3;
   }
 
 }
