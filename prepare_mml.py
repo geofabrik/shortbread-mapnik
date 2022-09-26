@@ -9,6 +9,26 @@ def get_layer_from_list_by_id(layer_list, name):
     return {}
 
 
+def get_datasource(source, vectortile_directory, layer_data, source_layer):
+    if source.lower() == "vector":
+        return {
+            "file": "{}".format(tile_dir),
+            "type": "ogr",
+            "layer": source_layer
+        }
+    if source.lower() == "postgis":
+        table = layer_data.get("sql_query", source_layer)
+        return {
+            "file": "{}".format(tile_dir),
+            "type": "postgis",
+            "dbname": "gis",
+            "geometry_field": "geom",
+            "key_field": "",
+            "extent": "-20037508,-20037508,20037508,20037508",
+            "table": table,
+        }
+
+
 import argparse
 import json
 import os.path
@@ -16,6 +36,7 @@ import sys
 import yaml
 
 parser = argparse.ArgumentParser(description="Convert .mml file to be used for rendering with Mapnik's OGR input plugin and OGR's MVT driver. Result is written to standard output in YAML format")
+parser.add_argument("-s", "--source", type=string, default="vector", help="Data source (vector, postgis)")
 parser.add_argument("-z", "--zoom", type=int, default=14, help="Zoom level")
 parser.add_argument("input_file", type=argparse.FileType("r"), help="input .mml file")
 parser.add_argument("path_to_zoom", type=str, help="Path to directory vectortile directory")
@@ -39,11 +60,7 @@ for i in range(len(layers)):
         "id": layer_from["id"],
         "geometry": layer_from["geometry"],
         "properties": layer_from["properties"],
-        "Datasource": {
-            "file": "{}".format(tile_dir),
-            "type": "ogr",
-            "layer": source_layer
-        },
+        "Datasource": get_datasource(args.source, tile_dir, layer_from, source_layer),
         "srs-name": "900913",
         "extent": "-20037508,-20037508,20037508,20037508",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",

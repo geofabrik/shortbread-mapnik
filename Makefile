@@ -14,7 +14,7 @@ shortbread_mapnik:
 	mv $(TEMPFILE) $@
 
 $(STYLE)_z%.mml: $(STYLE).mml
-	./style_for_rendering_with_ogr_mvt.py -z $* $< $(TILEDIR) > $@
+	./prepare_mml.py -z $* $< $(TILEDIR) > $@
 
 clean:
 	-rm -f shortbread_mapnik_z*.xml

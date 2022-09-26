@@ -32,6 +32,11 @@ Stylesheet:
 Layer:
   - id: ocean
     geometry: polygon
+    osm2pgsql_source_layers:
+      - name: simplified_water_polygons
+        maxzoom: 7
+      - name: ocean
+        minzoom: 8
     properties:
       buffer-size: 0
       maxzoom: 22
