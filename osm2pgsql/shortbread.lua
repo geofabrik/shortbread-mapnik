@@ -21,17 +21,6 @@ tables.boundaries = osm2pgsql.define_table({
     }
 })
 
-tables.boundary_labels = osm2pgsql.define_area_table('boundary_labels', {
-    { column = 'name',    type = 'text' },
-    { column = 'name_en',    type = 'text' },
-    { column = 'name_de',    type = 'text' },
-    { column = 'admin_level',    type = 'text' },
-    { column = 'way_area',    type = 'area' },
---    { column = 'point_geom',       type = 'point', projection = 3857, create_only = true },
---    { column = 'geom',       type = 'geometry', projection = 3857 },
-    { column = 'geom',       type = 'point', projection = 3857, not_null = true },
-})
-
 tables.addresses = osm2pgsql.define_table({
     name = 'addresses',
     ids = { type = 'any', id_column = 'osm_id', type_column = 'osm_type'},
@@ -236,7 +225,6 @@ function osm2pgsql.process_relation(object)
     local admin_level = object.tags.admin_level
     if rel_type == 'boundary' and boundary == 'administrative' and (admin_level == '2' or admin_level == '4') then
         process_boundaries(object)
-        process_boundary_labels(object)
     end
     if object.tags.type == "boundary" or object.tags.type == "multipolygon" then
         process_area(object)
@@ -826,14 +814,6 @@ function process_boundaries(rel)
         })
     end
 
-end
-
-function process_boundary_labels(area)
-    row = {
-        admin_level = area.tags.admin_level,
-        geom = area:as_multipolygon():centroid()
-    }
-    tables.boundary_labels:insert(setNameAttributes(area, row))
 end
 
 function process_place(object)
