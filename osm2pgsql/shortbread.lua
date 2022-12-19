@@ -232,6 +232,12 @@ function osm2pgsql.process_relation(object)
 end
 
 function process_area(object)
+    local area_tag = object.tags.area
+    -- Areas which aren't areas but just closed ways
+    if (area_tag == nil or area_tag == 'no') and (object.tags.highway or object.tags.railway or object.tags.aeroway) then
+        process_streets(object)
+        process_street_labels(object)
+    end
     -- Layer addresses
     if object.tags["addr:housenumber"] ~= nil or object.tags["addr:housename"] ~= nil then
             process_addresses(object, true)
