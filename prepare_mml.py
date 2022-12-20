@@ -87,7 +87,7 @@ for i in range(len(layers)):
         continue
     if args.source == "vector" and int(layer_from.get("properties", {}).get("maxzoom", 24)) < args.zoom:
         continue
-    if len(layer_from.get("osm2pgsql_source_layers", [])) > 0:
+    if args.source == "postgis" and len(layer_from.get("osm2pgsql_source_layers", [])) > 0:
         for source_index in range(len(layer_from.get("osm2pgsql_source_layers", []))):
             source_layer = layer_from["osm2pgsql_source_layers"][source_index]
             result_layers.append(modify_layer(layer_from, args.source, tile_dir, args.database, args.user, source_layer))
