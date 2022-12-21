@@ -32,6 +32,7 @@ Stylesheet:
 Layer:
   - id: ocean
     geometry: polygon
+    # Database tables to be used if rendering uses a Postgres database, not vector tiles 
     osm2pgsql_source_layers:
       - name: simplified_water_polygons
         maxzoom: 7
