@@ -43,6 +43,21 @@ Load into database using Osm2pgsql and its Flex output:
 osm2pgsql --output flex --style osm2pgsql/shortbread.lua -d vtiles --multi-geometry --merc your_osm_file.osm.pbf
 ```
 
+Clone Git repository of Tilemaker configuration and use its script to download shape files with vector data for low zoom levels and oceans:
+
+```sh
+git clone https://github.com/geofabrik/shortbread-tilemaker.git
+cd shortbread-tilemaker
+bash get-shapefiles.sh
+```
+
+Shape files will be located in the `data` subdirectory in the Git repository. Import them into the database now.
+Replace `SHAPE_DIRECTORY` by the path to the directory where the shape files are located.
+
+```sh
+bash load_shapefiles.sh -i SHAPE_DIRECTORY -d vtiles
+```
+
 Create .mml file for Kosmtik based on the template:
 
 ```sh
