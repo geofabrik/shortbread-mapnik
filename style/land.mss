@@ -113,6 +113,7 @@
   [kind = 'retail'],
   [kind = 'industrial'],
   [kind = 'commercial'],
+  [kind = 'garages'],
   [kind = 'residential']{
     [zoom >= 10] { 
       polygon-fill: @builtup;
@@ -126,6 +127,8 @@
 #sites {  
   [kind = 'sports_center'],
   [kind = 'university'],
+  [kind = 'college'],
+  [kind = 'school'],
   [kind = 'hospital'] {
     [zoom >= 14] {
       polygon-fill: @societal;
