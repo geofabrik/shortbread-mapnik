@@ -52,10 +52,8 @@ be used because Mapnik does not support SBIT TTF.
 /*
 A regular style.
 */
-@book-fonts:    "Noto Sans UI Regular",
-                "Noto Sans CJK JP Regular",
+@book-fonts:    "Noto Sans CJK JP Regular",
                 "Noto Sans Armenian Regular",
-                "Noto Sans Balinese Regular",
                 "Noto Sans Bamum Regular",
                 "Noto Sans Batak Regular",
                 "Noto Sans Bengali UI Regular",
@@ -95,9 +93,6 @@ A regular style.
                 "Noto Sans Sinhala Regular",
                 "Noto Sans Sundanese Regular",
                 "Noto Sans Symbols Regular",
-                "Noto Sans Syriac Eastern Regular",
-                "Noto Sans Syriac Estrangela Regular",
-                "Noto Sans Syriac Western Regular",
                 "Noto Sans Tagalog Regular",
                 "Noto Sans Tagbanwa Regular",
                 "Noto Sans Tai Le Regular",
@@ -122,8 +117,7 @@ A regular style.
 A bold style is available for almost all scripts. Bold text is heavier than
 regular text and can be used for emphasis. Fallback is a regular style.
 */
-@bold-fonts:    "Noto Sans UI Bold",
-                "Noto Sans CJK JP Bold",
+@bold-fonts:    "Noto Sans CJK JP Bold",
                 "Noto Sans Armenian Bold",
                 "Noto Sans Bengali UI Bold",
                 "Noto Sans Cham Bold",
@@ -147,7 +141,6 @@ regular text and can be used for emphasis. Fallback is a regular style.
                 "Noto Sans Tibetan Bold",
 
                 "Noto Sans CJK JP Regular",
-                "Noto Sans Balinese Regular",
                 "Noto Sans Bamum Regular",
                 "Noto Sans Batak Regular",
                 "Noto Sans Buginese Regular",
@@ -175,9 +168,6 @@ regular text and can be used for emphasis. Fallback is a regular style.
                 "Noto Sans Shavian Regular",
                 "Noto Sans Sundanese Regular",
                 "Noto Sans Symbols Regular",
-                "Noto Sans Syriac Eastern Regular",
-                "Noto Sans Syriac Estrangela Regular",
-                "Noto Sans Syriac Western Regular",
                 "Noto Sans Tagalog Regular",
                 "Noto Sans Tagbanwa Regular",
                 "Noto Sans Tai Le Regular",
@@ -199,11 +189,8 @@ regular text and can be used for emphasis. Fallback is a regular style.
 Italics are only available for the base font, not the other scripts.
 For a considerable number of labels this style will make no difference to the regular style.
 */
-@oblique-fonts: "Noto Sans UI Italic",
-                "Noto Sans UI Regular",
-                "Noto Sans CJK JP Regular",
+@oblique-fonts: "Noto Sans CJK JP Regular",
                 "Noto Sans Armenian Regular",
-                "Noto Sans Balinese Regular",
                 "Noto Sans Bamum Regular",
                 "Noto Sans Batak Regular",
                 "Noto Sans Bengali UI Regular",
@@ -243,9 +230,6 @@ For a considerable number of labels this style will make no difference to the re
                 "Noto Sans Sinhala Regular",
                 "Noto Sans Sundanese Regular",
                 "Noto Sans Symbols Regular",
-                "Noto Sans Syriac Eastern Regular",
-                "Noto Sans Syriac Estrangela Regular",
-                "Noto Sans Syriac Western Regular",
                 "Noto Sans Tagalog Regular",
                 "Noto Sans Tagbanwa Regular",
                 "Noto Sans Tai Le Regular",
