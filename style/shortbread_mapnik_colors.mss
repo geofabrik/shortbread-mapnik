@@ -162,7 +162,7 @@
 @aerodrome-color: #555;
 
 /* Water Features */
-@breakwater-color: #aaa; /* Also for groyne */
+@breakwater-color: #ccc; /* Also for groyne */
 @dam: #adadad;
 @dam-line: #aaa;
 @weir-line: #aaa;

@@ -1,9 +1,4 @@
 #land {
-  [kind = 'pier'] {
-    polygon-fill: @pier;    
-    polygon-gamma: 0.3;
-  }
-
   [kind = 'forest'][zoom >= 7] {
     polygon-gamma: 0.3;
     [zoom = 7] {

@@ -21,6 +21,7 @@ Stylesheet:
   - style/shortbread_mapnik_colors.mss
   - style/style.mss
   - style/water.mss
+  - style/water-features.mss
   - style/admin.mss
   - style/land.mss
   - style/buildings.mss
@@ -66,6 +67,22 @@ Layer:
       buffer-size: 0
       maxzoom: 22
       minzoom: 4
+  - id: piers-poly
+    geometry: polygon
+    Datasource:
+      layer: pier_polygons
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 12
+  - id: piers-line
+    geometry: linestring
+    Datasource:
+      layer: pier_lines
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 12
   - id: buildings
     geometry: polygon
     properties:

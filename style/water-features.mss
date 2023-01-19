@@ -58,20 +58,20 @@
 }
 
 #piers-poly, #piers-line {
-  [man_made = 'pier'][zoom >= 12] {
+  [kind = 'pier'][zoom >= 12] {
     #piers-poly {
-      polygon-fill: @land-color;
+      polygon-fill: @pier;
     }
     #piers-line {
       line-width: 1.5;
-      line-color: @land-color;
+      line-color: @pier;
       [zoom >= 13] { line-width: 3; }
       [zoom >= 16] { line-width: 7; }
     }
   }
 
-  [man_made = 'breakwater'][zoom >= 12],
-  [man_made = 'groyne'][zoom >= 12] {
+  [kind = 'breakwater'][zoom >= 12],
+  [kind = 'groyne'][zoom >= 12] {
     #piers-poly {
       polygon-fill: @breakwater-color;
     }
