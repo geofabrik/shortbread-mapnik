@@ -202,6 +202,14 @@ Layer:
       buffer-size: 0
       maxzoom: 22
       minzoom: 11
+  - id: addresses_pois
+    Datasource:
+      layer: pois
+    geometry: point
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 14
   - id: addresses
     geometry: point
     properties:

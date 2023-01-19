@@ -21,13 +21,14 @@
 
 
 /* Features related to (postal) adresses: */
+#addresses_pois,
 #addresses {
   [zoom >= 17] {
-    text-name: "[name]";
-    ["number" != null] {
-      text-name: [number];
-      ["name" != null] {
-        text-name: [number] + "\n" + [name];
+    text-name: "[housename]";
+    ["housenumber" != null] {
+      text-name: [housenumber];
+      ["housename" != null] {
+        text-name: [housenumber] + "\n" + [housename];
       }
     }
     text-placement: interior;
