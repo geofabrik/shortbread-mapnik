@@ -399,6 +399,8 @@
 
   /* SERVICE CASTING, ROAD CASING */
   [kind = 'road'][zoom >= 16],
+  [kind = 'busway'][zoom >= 16],
+  [kind = 'bus_guideway'][zoom >= 16],
   [kind = 'service'][zoom >= 16] {
     line-color: @service-casing;
     line-join: round;
@@ -843,6 +845,8 @@
 
   /* SERVICE FILL, ROAD FILL */
   [kind = 'road'][zoom >= 15],
+  [kind = 'busway'][zoom >= 15],
+  [kind = 'bus_guideway'][zoom >= 15],
   [kind = 'service'][service != 'driveway'][zoom >= 15 ],
   [kind = 'service'][zoom >= 16 ] {
     line-color: @service-fill;
@@ -1149,6 +1153,8 @@
   }
 
   [kind = 'raceway'],
+  [kind = 'busway'],
+  [kind = 'bus_guideway'],
   [kind = 'service'] {
     [zoom >= 16] {
       text-name: "[name]";
@@ -1158,8 +1164,14 @@
       text-clip: false;
       text-placement: line;
       text-halo-radius: @standard-halo-radius;
-      [kind = 'raceway'] { text-halo-fill: @raceway-fill; }
-      [kind = 'service'] { text-halo-fill: @service-fill; }
+      [kind = 'raceway'] {
+        text-halo-fill: @raceway-fill;
+      }
+      [kind = 'service'],
+      [kind = 'bus_guideway'],
+      [kind = 'busway'] {
+        text-halo-fill: @service-fill;
+      }
       text-face-name: @book-fonts;
     }
     [zoom >= 17] {
