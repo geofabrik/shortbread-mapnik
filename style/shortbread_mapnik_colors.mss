@@ -31,6 +31,8 @@
 @forest-zoom8:  lighten(@forest, 3%);
 @forest-zoom7:  lighten(@forest, 5%);
 @grass:     #E4EEDA;
+/* Opacity for grass, meadow, heath, scurb, grassland, swamp, bog, string_bog, wet_meadow, mash, common, garden */
+@grass-unimportant-opacity: 1;
 @cemetery:  #D6DED2;
 @quarry:    #DDDCD8;
 @builtup:   #ECEAE1;

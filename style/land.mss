@@ -35,9 +35,9 @@
   [kind = 'allotments'],
   [kind = 'village_green'],
   [kind = 'recreation_ground'],
-  [kind = 'greenhouse_horticulture'], 
-  [kind = 'plant_nursery'], 
-  [kind = 'heath'], 
+  [kind = 'greenhouse_horticulture'],
+  [kind = 'plant_nursery'],
+  [kind = 'heath'],
   [kind = 'scrub'],
   [kind = 'grassland'],
   [kind = 'swamp'],
@@ -54,9 +54,22 @@
   [kind = 'garden'] {
     [zoom >= 11] {
       polygon-fill: @grass;
+      [kind = 'grass'],
+      [kind = 'meadow'],
+      [kind = 'allotments'],
+      [kind = 'recreation_ground'],
+      [kind = 'greenhouse_horticulture'],
+      [kind = 'plant_nursery'],
+      [kind = 'golf_course'],
+      [kind = 'miniature_golf'][zoom >= 15],
+      [kind = 'park'],
+      [kind = 'recreation_ground'],
+      [kind = 'playground'] {
+        polygon-opacity: @grass-unimportant-opacity;
+      }
     }
   }
- 
+
   [kind = 'cemetery'],
   [kind = 'grave_yard'] {
     [zoom >= 13] {
