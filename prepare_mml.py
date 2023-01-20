@@ -59,6 +59,14 @@ def modify_layer(layer_data, source, tile_dir, database, user, special_source_la
     return result_layer
 
 
+def layer_in_zoom_range(layer_minzoom, layer_maxzoom, target_zoom):
+    # Largest zoom level vector tiles are produced for. This zoom level and all larger zoom levels use the same Mapnik style file.
+    max_vectortile_zoom = 14
+    if target_zoom < max_vectortile_zoom:
+        return layer_minzoom <= target_zoom and target_zoom <= layer_maxzoom
+    return max_vectortile_zoom <= layer_maxzoom
+
+
 parser = argparse.ArgumentParser(description="Convert .mml file to be used for rendering with Mapnik's OGR input plugin and OGR's MVT driver. Result is written to standard output in YAML format")
 parser.add_argument("-d", "--database", type=str, default="gis", help="Database name")
 parser.add_argument("-p", "--path-to-zoom", type=str, help="Path to directory vectortile directory. Required for --source=vector.")
@@ -83,10 +91,11 @@ if args.source == "vector":
 result_layers = []
 for i in range(len(layers)):
     layer_from = layers[i]
-    if args.source == "vector" and int(layer_from.get("properties", {}).get("minzoom", 0)) > args.zoom:
-        continue
-    if args.source == "vector" and int(layer_from.get("properties", {}).get("maxzoom", 24)) < args.zoom:
-        continue
+    if args.source == "vector":
+        lz1 = int(layer_from.get("properties", {}).get("minzoom", 0))
+        lz2 = int(layer_from.get("properties", {}).get("maxzoom", 24))
+        if not layer_in_zoom_range(lz1, lz2, args.zoom):
+            continue
     if args.source == "postgis" and len(layer_from.get("osm2pgsql_source_layers", [])) > 0:
         for source_index in range(len(layer_from.get("osm2pgsql_source_layers", []))):
             source_layer = layer_from["osm2pgsql_source_layers"][source_index]
