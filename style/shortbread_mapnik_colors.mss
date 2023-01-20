@@ -25,7 +25,11 @@
 @building-low-zoom: darken(@building-fill, 4%);
 
 /* Land */
-@forest:    #D3E3C3; 
+@forest:    #D3E3C3;
+@forest-zoom10: lighten(@forest, 1%);
+@forest-zoom9:  lighten(@forest, 2%);
+@forest-zoom8:  lighten(@forest, 3%);
+@forest-zoom7:  lighten(@forest, 5%);
 @grass:     #E4EEDA;
 @cemetery:  #D6DED2;
 @quarry:    #DDDCD8;

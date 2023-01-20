@@ -6,16 +6,16 @@
 
   [kind = 'forest'] {
     [zoom = 7] {
-      polygon-fill: lighten(@forest, 5%);
+      polygon-fill: @forest-zoom7;
     }
     [zoom = 8] {
-      polygon-fill: lighten(@forest, 3%);
+      polygon-fill: @forest-zoom8;
     }
     [zoom = 9] {
-      polygon-fill: lighten(@forest, 2%);
+      polygon-fill: @forest-zoom9;
     }
     [zoom = 10] {
-      polygon-fill: lighten(@forest, 1%);
+      polygon-fill: @forest-zoom10;
     }
   }
 
