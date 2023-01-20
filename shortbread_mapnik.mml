@@ -120,6 +120,14 @@ Layer:
       buffer-size: 64
       maxzoom: 22
       minzoom: 12
+  - id: streets-polygon-casing
+    geometry: linestring
+    Datasource:
+      layer: street_polygons
+    properties:
+      buffer-size: 64
+      maxzoom: 22
+      minzoom: 14
   - id: streets-fill-low
     geometry: linestring
     Datasource:
@@ -136,6 +144,14 @@ Layer:
       buffer-size: 64
       maxzoom: 22
       minzoom: 12
+  - id: streets-polygon-fill
+    geometry: linestring
+    Datasource:
+      layer: street_polygons
+    properties:
+      buffer-size: 64
+      maxzoom: 22
+      minzoom: 11
   - id: bridges
     geometry: linestring
     Datasource:

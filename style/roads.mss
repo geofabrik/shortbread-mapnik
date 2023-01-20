@@ -1019,6 +1019,32 @@
   }
 }
 
+#streets-polygon-casing {
+  [zoom >= 14][kind = 'pedestrian'] {
+    line-width: 1;
+    line-color: @pedestrian-casing;
+  }
+  [zoom >= 16][kind = 'service'] {
+    line-color: @service-casing;
+    line-width: 1;
+  }
+}
+
+#streets-polygon-fill {
+  [zoom >= 14][kind = 'pedestrian'] {
+    polygon-fill: @pedestrian-fill;
+  }
+  [zoom >= 16][kind = 'service'] {
+    polygon-fill: @service-fill;
+  }
+  [zoom >= 11][kind = 'runway'] {
+    polygon-fill: @runway-fill;
+  }
+  [zoom >= 13][kind = 'taxiway'] {
+    polygon-fill: @taxiway-fill;
+  }
+}
+
 #street_labels_points[kind = 'motorway_junction'] {
   [zoom >= 12] {
     text-name: "[ref]";
