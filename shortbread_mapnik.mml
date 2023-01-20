@@ -67,6 +67,22 @@ Layer:
       buffer-size: 0
       maxzoom: 22
       minzoom: 4
+  - id: water-barriers-poly
+    geometry: polygon
+    Datasource:
+      layer: dam_polygons
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 15
+  - id: water-barriers-line
+    geometry: linestring
+    Datasource:
+      layer: dam_lines
+    properties:
+      buffer-size: 0
+      maxzoom: 22
+      minzoom: 15
   - id: piers-poly
     geometry: polygon
     Datasource:

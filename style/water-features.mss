@@ -1,5 +1,5 @@
 #water-barriers-point, #water-barriers-line, #water-barriers-poly {
-  [waterway = 'dam'] {
+  [kind = 'dam'] {
     #water-barriers-poly[zoom >= 15] {
       line-width: 2;
       line-color: @dam-line;
@@ -24,7 +24,7 @@
     }
   }
 
-  [waterway = 'weir'] {
+  [kind = 'weir'] {
     #water-barriers-line[zoom >= 13] {
       line-color: @weir-line;
       line-width: 2;
@@ -41,7 +41,7 @@
     }
   }
 
-  [waterway = 'lock_gate'] {
+  [kind = 'lock_gate'] {
     #water-barriers-line[zoom >= 13] {
       line-color: @lock-gate-line;
       line-width: 2;
