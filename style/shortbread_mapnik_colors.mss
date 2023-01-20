@@ -2,6 +2,9 @@
 /* Basic Defintions */
 @land: #f4f3e6; 
 @standard-halo-fill: rgba(255,255,255,0.6);
+@junction-halo-fill: @standard-halo-fill;
+@water-halo-fill: @standard-halo-fill;
+@standard-halo-radius: 1;
 
 /* Administrative */
 @admin-boundaries: #663300;
@@ -148,6 +151,7 @@
 
 /* Stations */
 @station-color: #7981b0;
+@station-halo-fill: @standard-halo-fill;
 @station-text: darken(saturate(@station-color, 15%), 10%);
 @aerodrome-color: #555;
 

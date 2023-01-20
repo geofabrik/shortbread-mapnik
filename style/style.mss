@@ -2,8 +2,6 @@ Map {
   background-color: @land;
 }
 
-@standard-halo-radius: 1;
-
 /*
 About fonts:
 

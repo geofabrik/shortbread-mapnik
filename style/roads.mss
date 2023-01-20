@@ -1023,6 +1023,7 @@
     text-min-distance: 2;
     text-face-name: @oblique-fonts;
     text-halo-radius: @standard-halo-radius;
+    text-halo-fill: @junction-halo-fill;
     text-wrap-character: ";";
     text-wrap-width: 2; // effectively break after every wrap character
     text-line-spacing: -1.5; // -0.15 em

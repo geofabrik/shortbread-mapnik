@@ -212,7 +212,7 @@
     }
     [zoom >= 14] {
       text-fill: @place-light;
-      text-halo-fill: white;
+      text-halo-fill: @standard-halo-fill;
       text-size: 13;
       text-wrap-width: 65; // 5.0 em
       text-line-spacing: -0.65; // -0.05 em
